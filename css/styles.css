@@ -1,8 +1,8 @@
 #container {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    /* justify-content: flex-start; */
     gap: 0px;
     width: 400px;
     height: 400px;
@@ -14,6 +14,6 @@
     border: 1px;
 }
 
-.square:hover {
+/* .square:hover {
     background-color: black ;
-}
+} */

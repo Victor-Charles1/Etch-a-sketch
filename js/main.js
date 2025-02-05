@@ -1,7 +1,7 @@
 
 const container = document.querySelector('#container')
 
-
+// prompt('Enter number of squares per side for the new grid.')
 
 for(i=0; i<256;i++){
     let newDiv= document.createElement('div')
@@ -12,14 +12,22 @@ for(i=0; i<256;i++){
 }
 
 // event listener to change color of divs with class = square
-const write =document.querySelector('.square')
+const write =document.querySelectorAll('.square')
 
-write.addEventListener('mouseover',function(){
-    write.style.backgroundColor ='yellow';
-    console.log('I changed the background color with javascript')
-});
-write.addEventListener('mouseout',function(){
-    write.style.backgroundColor ='yellow';
-    console.log('I changed the background color with javascript')
+write.forEach(function(square) {
+    square.addEventListener('mouseover', function() {
+        square.style.backgroundColor = 'yellow';
+        console.log('I changed the background color with JavaScript');
+    });
+
+    square.addEventListener('mouseout', function() {
+        square.style.backgroundColor = 'yellow';
+        console.log('I changed the background color with JavaScript');
+    });
 });
 
+const btn = document.querySelector('#btn')
+btn.addEventListener('click', function(){
+   let choice=  prompt('Enter number of squares per side for the new grid.')
+   console.log(choice)
+});
